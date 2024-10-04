@@ -37,19 +37,16 @@ It will then fetch the data from AWS and plot it by opening your default browser
 
 You need to have the following policy on your AWS user or role:
 
-```
+```json
 {
-    "Version": "2012-10-17",
-    "Statement": [
-        {
-            "Sid": "VisualEditor0",
-            "Effect": "Allow",
-            "Action": [
-                "lambda:ListFunctions",
-                "cloudwatch:GetMetricStatistics"
-            ],
-            "Resource": "*"
-        }
-    ]
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "VisualEditor0",
+      "Effect": "Allow",
+      "Action": ["lambda:ListFunctions", "cloudwatch:GetMetricStatistics"],
+      "Resource": "*"
+    }
+  ]
 }
 ```
